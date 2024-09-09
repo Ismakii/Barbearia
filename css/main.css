@@ -1,34 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    image-rendering: src;
-    background-image: url(../Midia/pexels-nickoloui-1319459.jpg);
-    background-size: cover;
-  }
-  .head {
-    display: flex;
-  }
-  .opcoes {
-    justify-content: center;
-    margin-top: 10%;
-    margin-left: 10%;
-  }
-  .logo {
-    margin-left: 2%;
-  }
-  button {
-    background: none;
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    color: yellow;
-  }
-  
-  button:focus {
-    color: yellow;
-    outline: none;
-  }
-  
+  background-image: url(../Midia/planodefundo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 5%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.opcoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.opcoes ul {
+  display: flex;
+  list-style: none;
+}
+
+.opcoes ul li {
+  margin: 0 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.opcoes ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.opcoes ul li a:hover {
+  color: #eaff00;
+}
+
+#iframe-container {
+  margin: 185px auto 20px auto;
+  width: 80%;
+  text-align: center;
+}
+
+#iframe-content {
+  width: 85%;
+  height: 500px;
+  border: none;
+}
