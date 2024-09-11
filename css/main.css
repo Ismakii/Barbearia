@@ -5,8 +5,10 @@
 }
 
 body {
-  background: url("../Midia/planodefundo.jpg") no-repeat fixed center center /
-    cover;
+  background-image: url(../Midia/planodefundo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .head {
@@ -14,16 +16,16 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 3px 5%;
+  padding: 10px 5%;
   position: fixed;
   top: 0;
-  background-color: rgba(14, 14, 14, 0.7);
   z-index: 10;
 }
 
-.head img {
-  max-width: 100%;
-  height: auto;
+.opcoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .opcoes ul {
@@ -33,28 +35,28 @@ body {
 
 .opcoes ul li {
   margin: 0 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
 }
 
 .opcoes ul li a {
   text-decoration: none;
   color: #ffffff;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
 }
 
-.opcoes ul li a:hover,
-.opcoes ul li a.active {
+.opcoes ul li a:hover {
   color: #eaff00;
 }
 
 #iframe-container {
-  margin: 185px auto 20px;
+  margin: 200px auto 20px auto;
   width: 80%;
   text-align: center;
 }
 
 #iframe-content {
-  width: 100%;
-  height: 500px;
+  width: 70vw; 
+  height: 69vh; 
   border: none;
+  background-color: rgba(255, 255, 255, 0.9);
 }
