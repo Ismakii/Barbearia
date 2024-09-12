@@ -42,10 +42,20 @@ body {
 .opcoes ul li a {
   text-decoration: none;
   color: #ffffff;
+  display: block;
+  padding: 10px;
+  transition: color 0.3s, transform 0.3s;
+  font-size: 1em;
+}
+
+.opcoes ul li a.active {
+  color: #ffff00;
+  transform: scale(1.1);
 }
 
 .opcoes ul li a:hover {
-  color: #eaff00;
+  color: #ffff00;
+  transform: scale(1.1);
 }
 
 #iframe-container {
