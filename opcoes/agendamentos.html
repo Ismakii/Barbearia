@@ -1,11 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>agendamentos</title>
-  </head>
-  <body>
-    <h1>agendamentos</h1>
-  </body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/agendamentos.css">
+    <title>Agendamentos</title>
+</head>
+<body>
+    <section id="agendamentos">
+        <div class="agendamento-info">
+            <h2>Agende Seu Horário</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+                
+                <label for="servico">Serviço:</label>
+                <select id="servico" name="servico" required>
+                    <option value="" disabled selected>Selecione um serviço</option>
+                    <option value="barba" data-duracao="30" data-preco="20">Barba - R$ 20 (30 minutos)</option>
+                    <option value="corte" data-duracao="20" data-preco="15">Corte - R$ 15 (20 minutos)</option>
+                    <option value="corte-degrade" data-duracao="30" data-preco="20">Corte Degradê - R$ 20 (30 minutos)</option>
+                    <option value="corte-navalhado" data-duracao="30" data-preco="20">Corte Navalhado - R$ 20 (30 minutos)</option>
+                    <option value="freestyle" data-duracao="10" data-preco="5">Freestyle - R$ 5 (10 minutos)</option>
+                    <option value="sobrancelha" data-duracao="10" data-preco="10">Sobrancelha na Navalha - R$ 10 (10 minutos)</option>
+                </select>
+                
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+                
+                <label for="hora">Hora:</label>
+                <select id="hora" name="hora" required>
+                    <option value="" disabled selected>Selecione um horário</option>
+                    <option value="09:00">09:00 AM</option>
+                    <option value="09:30">09:30 AM</option>
+                    <option value="10:00">10:00 AM</option>
+                    <option value="10:30">10:30 AM</option>
+                    <option value="11:00">11:00 AM</option>
+                    <option value="11:30">11:30 AM</option>
+                    <option value="12:00">12:00 PM</option>
+                    <option value="12:30">12:30 PM</option>
+                    <option value="13:00">01:00 PM</option>
+                    <option value="13:30">01:30 PM</option>
+                    <option value="14:00">02:00 PM</option>
+                    <option value="14:30">02:30 PM</option>
+                    <option value="15:00">03:00 PM</option>
+                    <option value="15:30">03:30 PM</option>
+                    <option value="16:00">04:00 PM</option>
+                    <option value="16:30">04:30 PM</option>
+                </select>
+                
+                <button type="submit">Agendar</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.getElementById('servico').addEventListener('change', function() {
+            const selectedOption = this.options[this.selectedIndex];
+            const duracao = selectedOption.getAttribute('data-duracao');
+            const preco = selectedOption.getAttribute('data-preco');
+            
+            console.log(`Serviço: ${this.value}`);
+            console.log(`Duração: ${duracao} minutos`);
+            console.log(`Preço: R$ ${preco}`);
+        });
+    </script>
+</body>
 </html>

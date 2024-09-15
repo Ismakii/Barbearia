@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INICIO</title>
-  </head>
-  <body>
-    <h1>inicio</h1>
-  </body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/inicio.css">
+    <title>Serviços</title>
+</head>
+<body>
+    <section id="servicos">
+        <h2>Seja Bem-Vindo</h2>
+        <div class="servico-grid">
+            <div class="servico-item" onclick="toggleDetails('barba')">
+                <div class="servico-icon">
+                    <img src="../Midia/barba.png" alt="Barba">
+                </div>
+                <h3>Barba</h3>
+                <p>R$ 20</p>
+                <div id="details-barba" class="servico-details">
+                    <p><strong>Duração:</strong> 30 minutos</p>
+                    <p>Serviço completo de aparo de barba com produtos de alta qualidade.</p>
+                </div>
+            </div>
+            <div class="servico-item" onclick="toggleDetails('corte')">
+                <div class="servico-icon">
+                    <img src="../Midia/corte.png" alt="Corte">
+                </div>
+                <h3>Corte</h3>
+                <p>R$ 15</p>
+                <div id="details-corte" class="servico-details">
+                    <p><strong>Duração:</strong> 20 minutos</p>
+                    <p>Corte tradicional com acabamento perfeito.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleDetails(servico) {
+            const details = document.getElementById('details-' + servico);
+            if (details.style.display === 'block') {
+                details.style.display = 'none';
+            } else {
+                details.style.display = 'block';
+            }
+        }
+    </script>
+</body>
 </html>
